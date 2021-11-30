@@ -1,0 +1,79 @@
+{% extends 'net_library/base.html' %}
+{% load static %}
+{% block body %}
+
+     
+        <!-- Dialog form-->
+        <div id="contact">
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#contact-modal" id="add_book_main_page">Добавить книгу</button>
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#view-modal" id="view_book_main_page">Добавить книгу</button>
+        </div>
+<div id="contact-modal" class="modal fade" role="dialog">
+	<div class="modal-dialog" id = modal_dialog_id>
+		<div class="modal-content">
+			<div class="modal-header">
+				<a class="close" data-dismiss="modal">×</a>
+				<h3>Добавление книги</h3>
+			</div>
+			<form id="contactForm" name="contact" role="form">
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="name">Название</label>
+						<input type="text" id = "book_title_id" name="name" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="author">Автор</label>
+						<input type="text" id = "book_author_id" name="author" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="content">Описание</label>
+						<textarea name="content" id = "book_content_id" class="form-control"></textarea>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-dismiss="modal">Отменить</button>
+          <button type="button" class="btn btn-success" id = "input_add_book">Добавить</button>
+					<!-- <input type="submit" id = "input_add_book" class="btn btn-dark btn-sm" id="submit"> -->
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!--Dialog form end-->
+
+<!--View book-->
+
+<div id="view-modal" class="modal fade" role="dialog">
+	<div class="modal-dialog" id = modal_dialog_id>
+		<div class="modal-content" id = modal_content_view_id>
+			<div class="modal-header">
+				<a class="close" data-dismiss="modal">×</a>
+				<h3>Просмотр книги</h3>
+			</div>
+			<form id="contactForm" name="contact" role="form">
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="name">Название</label>
+						<input type="text" id = "book_title_id" name="name" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="author">Автор</label>
+						<input type="text" id = "book_author_id" name="author" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="content">Описание</label>
+					<textarea name="content" id = "book_view_content_id" class="form-control"></textarea>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" onclick="del_book()" class="btn btn-success" data-dismiss="modal">Удалить</button>
+          			<button type="button" class="btn btn-success" id = "change_book_id">Сохранить</button>
+					<!-- <input type="submit" id = "input_add_book" class="btn btn-dark btn-sm" id="submit"> -->
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!--end view-->
+{% endblock %}
+
