@@ -4,7 +4,7 @@
 <br>
 2) docker-compose up
 <br>
-Если ошибка проверте (entrypoint.sh должен быть перенос строк Unix(lf))
+Если ос windows проверте (entrypoint.sh должен быть перенос строк Unix(lf))
 
 <h2>Без докера</h2>
 1) install python 3.9<br>
